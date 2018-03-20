@@ -26,88 +26,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        r = new Random();
-        answer2= (Button) findViewById(R.id.answer2);
-        answer3= (Button) findViewById(R.id.answer3);
-        answer4= (Button) findViewById(R.id.answer4);
+        setContentView(R.layout.nav_drawer);
 
-        score= (TextView) findViewById(R.id.score);
-        question= (TextView) findViewById(R.id.question);
-
-        score.setText("Rezultat: "+ mScore);
-
-        updateQuestion(counter);
-
-        answer2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(answer2.getText() == mAnswer && counter<=8){
-                    mScore++;
-                    score.setText("Rezultat: "+ mScore);
-                    counter++;
-                    updateQuestion(counter);
-
-                }
-                else if (answer2.getText() == mAnswer && counter==9){
-                    mScore++;
-                    gameOver();
-                }
-                else if (answer2.getText() != mAnswer && counter==9){
-                    gameOver();
-                }
-                else{
-                    counter++;
-                    updateQuestion(counter);
-                }
-            }
-        });
-        answer3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(answer3.getText() == mAnswer && counter<=8){
-                    mScore++;
-                    score.setText("Rezultat: "+ mScore);
-                    counter++;
-                    updateQuestion(counter);
-
-                }
-                else if (answer3.getText() == mAnswer && counter==9){
-                    mScore++;
-                    gameOver();
-                }
-                else if (answer3.getText() != mAnswer && counter==9){
-                    gameOver();
-                }
-                else{
-                    counter++;
-                    updateQuestion(counter);
-                }
-            }
-        });
-        answer4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(answer4.getText() == mAnswer && counter<=8){
-                    mScore++;
-                    score.setText("Rezultat: "+ mScore);
-                    counter++;
-                    updateQuestion(counter);
-
-                }
-                else if (answer4.getText() == mAnswer && counter==9){
-                    mScore++;
-                    gameOver();
-                }
-                else if (answer4.getText() != mAnswer && counter==9){
-                    gameOver();
-                }
-                else{
-                    counter++;
-                    updateQuestion(counter);
-                }
-            }
-        });
     }
     private void updateQuestion(int num){
         question.setText(mQuestions.getQuestion(num));
