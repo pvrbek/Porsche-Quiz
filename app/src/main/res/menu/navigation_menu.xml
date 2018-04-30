@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_account"
-        android:title="@string/nav_account" />
-    <item android:id="@+id/nav_settings"
+    <group android:checkableBehavior="single">
+
+
+        <item android:id="@+id/refresh"
+        android:title="@string/refresh"
+        android:icon="@drawable/ic_action_refresh"
+        />
+
+        <item android:id="@+id/stop"
+            android:title="@string/stop"
+            android:icon="@drawable/ic_action_refresh"
+            />
+
+        <item android:id="@+id/nav_settings"
         android:title="@string/nav_settings" />
-    <item android:id="@+id/nav_logout"
+
+        <item android:id="@+id/nav_logout"
         android:title="@string/nav_logout" />
+
+    </group>
 </menu>
