@@ -7,10 +7,6 @@
     android:background="@color/black"
     >
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/custom_toolbar" />
-
     <Button
         android:id="@+id/answer4"
         android:layout_width="368dp"

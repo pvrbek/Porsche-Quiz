@@ -16,7 +16,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -41,16 +40,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.home);
         setToolbar();
         configureNavigationDrawer();
-        button1 = findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentNav= new Intent(MainActivity.this,NewActivity.class);
-                startActivity(intentNav);
-            }
-        });
+        }
 
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -87,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
                 Fragment f = null;
                 int itemId = item.getItemId();
 
-                if (itemId == R.id.refresh){
-                    f = new RefreshFragment();
-                } else if (itemId == R.id.stop){
+                if (itemId == R.id.stop){
                     f = new StopFragment();
+                } else if (itemId == R.id.refresh){
+                    f = new RefreshFragment();
                 }
                 if (f != null){
                     android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
