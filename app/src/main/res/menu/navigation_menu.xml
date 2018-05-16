@@ -8,13 +8,13 @@
         android:icon="@drawable/ic_action_refresh"
         />
 
-        <item android:id="@+id/stop"
-            android:title="@string/stop"
+        <item android:id="@+id/create_user"
+            android:title="@string/create_user"
             android:icon="@drawable/ic_action_refresh"
             />
 
-        <item android:id="@+id/nav_settings"
-        android:title="@string/nav_settings" />
+        <item android:id="@+id/list_users"
+        android:title="@string/list_users" />
 
         <item android:id="@+id/nav_logout"
         android:title="@string/nav_logout" />

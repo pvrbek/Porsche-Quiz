@@ -5,7 +5,10 @@
     <string name="nav_logout">Logout</string>
     <string name="open">Open</string>
     <string name="refresh">Refresh</string>
-    <string name="stop">Stop</string>
+    <string name="create_user">Create user</string>
+    <string name="list_users">List all users</string>
     <string name="close">Close</string>
     <string name="buttonText">Button Text</string>
+    <string name="profileName">Enter your name:</string>
+    <string name="profileSurname">Enter your surname:</string>
 </resources>

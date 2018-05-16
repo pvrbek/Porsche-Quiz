@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         setToolbar();
+        mDrawerLayout = findViewById(R.id.mainLayout);
+        Fragment f = null;
+        f = new CreateUser();
+        android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame,f);
+        transaction.commit();
         configureNavigationDrawer();
         }
 
@@ -79,10 +85,12 @@ public class MainActivity extends AppCompatActivity {
                 Fragment f = null;
                 int itemId = item.getItemId();
 
-                if (itemId == R.id.stop){
-                    f = new StopFragment();
+                if (itemId == R.id.create_user){
+                    f = new CreateUser();
                 } else if (itemId == R.id.refresh){
                     f = new RefreshFragment();
+                } else if (itemId == R.id.list_users){
+                    f = new ListAllUsers();
                 }
                 if (f != null){
                     android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
