@@ -7,13 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
-    ArrayList<String> users;
+    List<UserEntity> users;
 
-    public UserAdapter(ArrayList<String> users) {
+    public UserAdapter(List<UserEntity> users) {
         this.users = users;
     }
 
@@ -25,7 +25,9 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapter.ViewHolder holder, int position) {
-    holder.firstName.setText(users.get(position));
+        holder.firstName.setText("First Name: " + users.get(holder.getAdapterPosition()).getFirstName());
+        holder.lastName.setText("Last Name: " + users.get(holder.getAdapterPosition()).getLastName());
+        holder.idUser.setText("ID: " + String.valueOf(users.get(holder.getAdapterPosition()).getId()));
     }
 
     @Override
@@ -35,10 +37,14 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView firstName;
+        public TextView lastName;
+        public TextView idUser;
 
         public ViewHolder(View itemView) {
             super(itemView);
             firstName = itemView.findViewById(R.id.first_name);
+            lastName = itemView.findViewById(R.id.last_name);
+            idUser = itemView.findViewById(R.id.id_user);
         }
     }
 }
