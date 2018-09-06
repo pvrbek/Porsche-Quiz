@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment f = null;
                 int itemId = item.getItemId();
-
                 if (itemId == R.id.create_user){
                     f = new CreateUser();
                 } else if (itemId == R.id.refresh){

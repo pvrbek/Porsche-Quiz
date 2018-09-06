@@ -31,41 +31,65 @@ public class Quiz {
         RefreshFragment.setQuestion(mQuestions.getQuestion(num));
     }
     public void startQuiz (){
-        if (counter<mQuestionLength){
-            updateQuestion(counter);}
+            updateQuestion(counter);
+            if (counter==9){
+
+            }
             RefreshFragment.answer2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (RefreshFragment.answer2.getText()==mAnswer){
-                        mScore++;
-                        RefreshFragment.setScore(mScore);
-                        counter++;
-                        if (counter<mQuestionLength){
-                        updateQuestion(counter);}
+                    if(RefreshFragment.answer2.getText()==mAnswer){
+                            mScore++;
+                            RefreshFragment.setScore(mScore);
+                        if (counter<mQuestionLength-1){
+                            counter++;
+                            updateQuestion(counter);}
+                    }
+
+                    else{
+                        if (counter<mQuestionLength-1){
+                            counter++;
+                            updateQuestion(counter);}
+                            else{
+                        return;}
                     }
                 }
             });
             RefreshFragment.answer3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (RefreshFragment.answer3.getText()==mAnswer){
-                        mScore++;
-                        RefreshFragment.setScore(mScore);
-                        counter++;
-                        if (counter<mQuestionLength){
-                            updateQuestion(counter);}
+                        if(RefreshFragment.answer3.getText()==mAnswer){
+                            mScore++;
+                            RefreshFragment.setScore(mScore);
+                            if (counter<mQuestionLength-1){
+                                counter++;
+                                updateQuestion(counter);}
+                        }
+                    else{
+                            if (counter<mQuestionLength-1){
+                                counter++;
+                                updateQuestion(counter);}
+                                else{
+                        return;}
                     }
                 }
             });
             RefreshFragment.answer4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (RefreshFragment.answer4.getText()==mAnswer){
-                        mScore++;
-                        RefreshFragment.setScore(mScore);
-                        counter++;
-                        if (counter<mQuestionLength){
-                            updateQuestion(counter);}
+                        if(RefreshFragment.answer4.getText()==mAnswer){
+                            mScore++;
+                            RefreshFragment.setScore(mScore);
+                            if (counter<mQuestionLength-1){
+                                counter++;
+                                updateQuestion(counter);}
+                        }
+                    else{
+                            if (counter<mQuestionLength-1){
+                                counter++;
+                                updateQuestion(counter);}
+                                else{
+                        return;}
                     }
                 }
             });

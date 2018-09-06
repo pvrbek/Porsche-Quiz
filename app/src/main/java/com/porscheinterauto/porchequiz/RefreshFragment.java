@@ -41,8 +41,6 @@ public class RefreshFragment extends Fragment {
         answer4 = v.findViewById(R.id.answer4);
         score = v.findViewById(R.id.score);
         question = v.findViewById(R.id.question);
-        question.setText("ALOO");
-        setAnswer2("Ide");
         quiz.startQuiz();
         return v;
     }
